@@ -16,6 +16,12 @@
   --color-acento-1-hover: #196cc0;
 }
 
+.icono:hover {
+  background: #38b0f1;
+  border-radius: none;
+  transition: all 0.2s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
