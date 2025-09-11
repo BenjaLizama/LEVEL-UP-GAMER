@@ -57,10 +57,11 @@ footer {
   height: 5rem;
   width: 100%;
   background-color: #040b1b;
-  bottom: -3%;
+  bottom: -1%;
 }
 
 .icono {
+  width: 100%;
   display: flex;
   padding-top: 0.8rem;
   flex-direction: column;
@@ -69,6 +70,15 @@ footer {
   row-gap: 0.3rem;
   font-family: var(--fuente-principal);
   color: var(--color-texto-principal);
+}
+
+.icono a {
+  color: var(--color-texto-principal);
+  text-decoration: none;
+}
+
+.icono:first-child {
+  background-color: var(--color-acento-1);
 }
 
 main {
@@ -227,9 +237,9 @@ main {
 }
 
 .horaPublicacion {
-  position: absolute;
+  position: relative;
   color: var(--color-texto-secundario);
-  right: 10%;
+  right: -10%;
 }
 
 .iconos {
@@ -408,6 +418,12 @@ main {
     margin-top: 2rem;
   }
 
+  .nav {
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+  }
+
   .contenedor-header {
     justify-content: space-evenly;
   }
@@ -418,11 +434,17 @@ main {
 
   .nav {
     display: flex;
-    width: 25vw;
+    width: 400px;
     justify-content: space-between;
   }
 
-  .nav span {
+  .nav a {
     cursor: pointer;
+    text-decoration: none;
+    color: var(--color-texto-principal);
+  }
+
+  .nav a:first-child {
+    color: var(--color-acento-2);
   }
 }

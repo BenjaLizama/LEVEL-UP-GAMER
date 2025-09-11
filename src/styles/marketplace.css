@@ -91,6 +91,7 @@ footer {
 }
 
 .icono {
+  width: 100%;
   display: flex;
   padding-top: 0.8rem;
   flex-direction: column;
@@ -99,6 +100,15 @@ footer {
   row-gap: 0.3rem;
   font-family: var(--fuente-principal);
   color: var(--color-texto-principal);
+}
+
+.icono a {
+  color: var(--color-texto-principal);
+  text-decoration: none;
+}
+
+.icono:nth-child(2) {
+  background-color: var(--color-acento-1);
 }
 
 main {
@@ -300,8 +310,14 @@ option {
     justify-content: space-between;
   }
 
-  .nav span {
+  .nav a {
     cursor: pointer;
+    text-decoration: none;
+    color: var(--color-texto-principal);
+  }
+
+  .nav a:nth-child(2) {
+    color: var(--color-acento-2);
   }
 
   .busqueda {

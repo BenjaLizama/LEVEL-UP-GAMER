@@ -52,3 +52,7 @@ button span {
 p {
   font-family: var(--fuente-principal);
 }
+
+a {
+  color: var(--color-acento-1);
+}
