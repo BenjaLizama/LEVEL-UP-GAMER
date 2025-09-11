@@ -11,3 +11,15 @@ document.querySelector(".prev").onclick = () => {
   index = (index - 1 + slides.length) % slides.length;
   carrusel.scrollTo({ left: slides[index].offsetLeft, behavior: "smooth" });
 };
+
+corazones.forEach((corazon) => {
+  corazon.addEventListener("click", () => {
+    corazon.classList.toggle("liked");
+  });
+});
+
+repost.forEach((repo) => {
+  repo.addEventListener("click", () => {
+    repo.classList.toggle("reposted");
+  });
+});

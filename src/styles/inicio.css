@@ -368,6 +368,14 @@ main {
   font-family: var(--fuente-encabezado);
 }
 
+.liked {
+  color: red;
+}
+
+.reposted {
+  color: aqua;
+}
+
 /* Responsive */
 @media (min-width: 1024px) {
   main {
