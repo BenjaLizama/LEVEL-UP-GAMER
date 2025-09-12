@@ -58,15 +58,19 @@ formularioLogin.addEventListener("submit", (e) => {
 
   //validar correo
   if (!emailRegex.test(correoLogin.value.trim())) {
-    mensajeserror.push("Correo invalido favor revisar.");
+    mensajeserror.push(
+      "El formato del correo es invalido (Ejemplo: tuCorreo@gmail.com)."
+    );
     correoLogin.classList.add("error");
   } else {
     correoLogin.classList.remove("error");
   }
 
   //validar la contraseña
-  if (claveLogin.value.trim("") === "") {
-    mensajeserror.push("La contraseña no puede estar vacia.");
+  if (claveLogin.value.trim("").length <= 7) {
+    mensajeserror.push(
+      "La contraseña no puede esta vacia (Minimo 8 caracteres)."
+    );
     claveLogin.classList.add("error");
   } else {
     claveLogin.classList.remove("error");
@@ -74,16 +78,15 @@ formularioLogin.addEventListener("submit", (e) => {
   errorlogin.innerHTML = mensajeserror.join("<br>");
 
   //evuar login
-  if (mensajeserror.length > 0) {
-  } else {
+  if (mensajeserror.length === 0) {
     errorlogin.innerHTML = "";
-    alert("login correcto ");
+    alert("¡Inicio de sesión exitoso!\n¡Bienvenido!");
     formularioLogin.reset();
+    window.location.href = "/src/pages/inicio.html";
   }
 });
 
 //formulario registro
-
 const formularioRegistro = document.getElementById("formulario-crear-cuenta");
 const nombreregistro = document.getElementById("nombre-crear");
 const correoRegistro = document.getElementById("correo-crear");
@@ -93,34 +96,45 @@ const errorregistro = document.getElementById("error-crear");
 formularioRegistro.addEventListener("submit", (e) => {
   e.preventDefault();
   let mensajeserror = [];
+
   //validacion nombre
-  if (!nombreregistro.value.trim()) {
-    mensajeserror.push("Favor revisar el nombre (esta vacio).");
+  if (nombreregistro.value.trim().length <= 2) {
+    mensajeserror.push("Favor revisar el nombre (Minimo 3 caracteres).");
     nombreregistro.classList.add("error");
   } else {
     nombreregistro.classList.remove("error");
   }
+
   //validacion correo
   if (!emailRegex.test(correoRegistro.value.trim())) {
-    mensajeserror.push("Favor revisar el correo.");
+    mensajeserror.push(
+      "El formato del correo es invalido (Ejemplo: tuCorreo@gmail.com)."
+    );
     correoRegistro.classList.add("error");
   } else {
     correoRegistro.classList.remove("error");
   }
+
   //validacion contraseña
-  if (claveregistro.value.trim("") === "") {
-    mensajeserror.push("La contraseña no puede esta vacia.");
+  if (claveregistro.value.trim().length <= 7) {
+    mensajeserror.push(
+      "La contraseña no puede esta vacia (Minimo 8 caracteres)."
+    );
     claveregistro.classList.add("error");
   } else {
     claveregistro.classList.remove("error");
   }
+
   //mostrar mensaje de error
   errorregistro.innerHTML = mensajeserror.join("<br>");
+
   //evaluar registro
-  if (mensajeserror.length > 0) {
-  } else {
-    alert("registro correcto");
-    mensajeserror.innerHTML = "";
+  if (mensajeserror.length === 0) {
+    alert(
+      `¡Tu cuenta ha sido creada con exito!\n¡Bienvenido, ${nombreregistro.value}!`
+    );
+    errorregistro.innerHTML = "";
     formularioRegistro.reset();
+    window.location.href = "/src/pages/inicio.html";
   }
 });
