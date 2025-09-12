@@ -1,7 +1,7 @@
 const carrusel = document.querySelector(".carrusel");
 const slides = document.querySelectorAll(".slide");
-const corazon = document.querySelectorAll(".fa-heart");
-const repo = document.querySelectorAll(".fa-retweet");
+const corazones = document.querySelectorAll(".fa-heart");
+const repost = document.querySelectorAll(".fa-retweet");
 let index = 0;
 
 document.querySelector(".next").onclick = () => {
