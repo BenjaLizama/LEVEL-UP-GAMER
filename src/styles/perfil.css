@@ -198,6 +198,7 @@ main {
 
 .config div:hover {
   background-color: #1776d5;
+  transition: 0.1s ease;
 }
 
 .config div:last-child {

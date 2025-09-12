@@ -15,6 +15,11 @@
 
   --color-acento-1-hover: #196cc0;
 }
+.error {
+  background-color: rgba(191, 51, 51, 0);
+  color: #ffffff;
+  background-color: #ff00002c;
+}
 
 .icono:hover {
   background: #38b0f1;

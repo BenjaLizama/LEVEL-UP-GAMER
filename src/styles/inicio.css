@@ -329,6 +329,10 @@ main {
   transform: scale(1.03);
 }
 
+input {
+  background: none !important;
+}
+
 .card-info {
   display: flex;
   flex-direction: column;

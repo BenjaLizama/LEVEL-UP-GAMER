@@ -111,8 +111,8 @@ form input {
   border-radius: 10px;
   border: 2px solid var(--color-texto-secundario);
   padding: 1.4rem 1rem;
-  background-color: #ffffff;
-  color: #040b1b;
+  background-color: #0000005c;
+  color: #ffffff;
 }
 
 .boton-formulario {
@@ -163,7 +163,11 @@ form input:focus {
 }
 
 .fa-eye-slash {
-  color: rgb(35, 35, 35);
+  color: #ffffff !important;
+}
+
+.fa-eye {
+  color: #ffffff !important;
 }
 
 .error {

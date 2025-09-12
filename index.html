@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-    <title> LEVEL-UP GAMER | Iniciar sesion</title>
+    <title>LEVEL-UP GAMER | Iniciar sesion</title>
   </head>
   <body>
     <div class="background"></div>
@@ -25,21 +25,28 @@
           <h1>Accede a tu cuenta</h1>
           <p>¡Bienvenido nuevamente!</p>
         </article>
-        <form>
-          <input type="email" placeholder="Correo electronico" id="correo"/>
+        <form id="formulario-login">
+          <input
+            type="text"
+            placeholder="Correo electronico"
+            id="correo-login"
+          />
           <div class="input-container">
             <input
               id="password-login"
               class="password"
               type="password"
               placeholder="Contraseña"
-            id="clave"/>
-            <button class="toggle-password">
+              id="clave"
+            />
+            <button type="button" class="toggle-password">
               <i class="fa-solid fa-eye-slash"></i>
             </button>
           </div>
-          <p>&nbsp;</p id="error">
-          <button class="boton-formulario"><span>Entrar</span></button>
+          <p id="error-login">&nbsp;</p>
+          <button type="submit" class="boton-formulario">
+            <span>Entrar</span>
+          </button>
         </form>
       </div>
       <div class="crear-cuenta" id="crear-cuenta">
@@ -51,21 +58,26 @@
           <h1>Crea tu cuenta</h1>
           <p>¡Bienvenido a Level-up Gamer, nos emociona tenerte aqui!</p>
         </article>
-        <form>
-          <input type="text" placeholder="Tu nombre" id="nombre"/>
-          <input type="email" placeholder="Correo electronico"id="correo" />
+        <form id="formulario-crear-cuenta">
+          <input type="text" placeholder="Tu nombre" id="nombre-crear" />
+          <input
+            type="text"
+            placeholder="Correo electronico"
+            id="correo-crear"
+          />
           <div class="input-container">
             <input
               id="password-crear"
               class="password"
               type="password"
               placeholder="Contraseña"
-            id="clave"/>
-            <button class="toggle-password">
+              id="clave"
+            />
+            <button type="button" class="toggle-password">
               <i class="fa-solid fa-eye-slash"></i>
             </button>
           </div>
-          <p>&nbsp;</p id="Error">
+          <p id="error-crear">&nbsp;</p>
           <p>
             Ya tienes una cuenta?
             <span><a href="#" id="btn-login">Iniciar sesion</a></span>
