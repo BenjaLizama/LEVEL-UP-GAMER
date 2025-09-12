@@ -19,6 +19,11 @@
   /* Aqui podemos cambiar el estilo del scrollbar */
 }
 
+.liked {
+  color: rgb(221, 10, 63);
+  transition: all 0.2s ease;
+}
+
 body {
   display: grid;
   grid-template-columns: repeat(auto, 1fr);

@@ -66,3 +66,8 @@ p {
 a {
   color: var(--color-acento-1);
 }
+
+hr {
+  color: #ffffff25;
+  margin: 1rem;
+}
